@@ -7,4 +7,4 @@ const user = new Shema({
   avatar: {type: String},
 })
 
-module.exports = model("user", user)
+  module.exports = model("user", user)
