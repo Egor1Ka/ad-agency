@@ -1,0 +1,4 @@
+{
+  "serverPORT": "5000",
+  "dbURL": "mongodb+srv://zapasnoy:k._20021996@adagency.d3ksc.mongodb.net/adAgency?retryWrites=true&w=majority"
+}
