@@ -1,6 +1,6 @@
-const {Shema, model, ObjectId} = require("mongoose")
+const {Schema, model, ObjectId} = require("mongoose")
 
-const contract = new Shema({
+const contract = new Schema({
   title: {type: String, required: true},
   description: {type: String, required: true},
   summ: {type: Number, required: true}

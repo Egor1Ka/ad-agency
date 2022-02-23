@@ -1,6 +1,6 @@
-const {Shema, model, ObjectId} = require("mongoose")
+const {Schema, model, ObjectId} = require("mongoose")
 
-const client = new Shema({
+const client = new Schema({
   email: {type: String, required: true, unique: true},
   login: {type: String, required: true, unique: true},
   password: {type: String, required: true},
