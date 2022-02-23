@@ -5,6 +5,7 @@ const auth_router = require("./routes/auth.routes");
 const app = express();
 const PORT = config.get("serverPORT");
 
+app.use(express.json());
 app.use("/api/auth", auth_router);
 
 const start = async _ => {
