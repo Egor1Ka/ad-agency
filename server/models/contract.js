@@ -6,4 +6,4 @@ const contract = new Schema({
   summ: {type: Number, required: true}
 })
 
-  module.exports = model("contract", contract)
+  module.exports = model("contract", contract);

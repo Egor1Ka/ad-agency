@@ -2,7 +2,7 @@ const {Schema, model, ObjectId} = require("mongoose")
 
 const advertiser = new Schema({
   email: {type: String, required: true, unique: true},
-  login: {type: String, unique: true},
+  login: {type: String},
   password: {type: String, required: true},
   type: {type: Number},
   avatar: {type: String},

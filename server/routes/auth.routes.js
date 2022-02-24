@@ -1,6 +1,6 @@
 const Router = require("express");
 const Advertiser = require("../models/advertiser");
-const {check, validation_result} = require("express-validator");
+const {check, validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 const router = new Router();
 
@@ -11,12 +11,13 @@ router.post('/registration',
 ],
 async (req, res) => {
 
-  // const errors = validation_result(req);
-  // if(!errors.isEmpty()){
-  //   return res.status(400).json({message: "Uncorrect request", errors})
-  // }
+   const errors = validationResult(req);
+   if(!errors.isEmpty()){
+     return res.status(400).json({message: "Uncorrect request", errors})
+   }
 
   try {
+    console.log(req.body)
     const {email, password} = req.body;
     const candidate = await Advertiser.findOne({email});
     
